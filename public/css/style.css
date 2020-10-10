@@ -1,0 +1,40 @@
+body {
+  font-family: "Permanent Marker";
+  font-size: 16px;
+}
+.height {
+  min-height: 100vh;
+}
+
+.fullcn {
+  background-image: url("../img/background.jpg");
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text {
+  text-transform: uppercase;
+  background: linear-gradient(to right, #3b90d6 0%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 8vw;
+  font-family: "Poppins", sans-serif;
+}
+.text_small {
+  text-transform: uppercase;
+  background: linear-gradient(to right, #3b90d6 0%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3vw;
+  font-family: "Poppins", sans-serif;
+}
+.myImage {
+  background: #000;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 20px 5px;
+  display: none;
+}
