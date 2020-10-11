@@ -6,6 +6,7 @@ const geocode = require("./utils/geocode.js");
 const weather_stack = require("./utils/weather_stack.js");
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 console.log(__dirname);
 
@@ -47,6 +48,7 @@ app.get("/weather", (req, res) => {
       message: "You must provide the address",
     });
   }
+
   geocode(
     req.query.address,
     (error, { latitude, longitude, location } = {}) => {
@@ -82,6 +84,6 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("Server is up");
+app.listen(port, () => {
+  console.log("Server is up at port: " + port);
 });
