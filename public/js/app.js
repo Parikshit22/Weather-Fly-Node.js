@@ -13,6 +13,9 @@ function demo(e) {
         console.log(data.error);
         document.querySelector("#message_1").innerText = data.error;
         document.querySelector("#message_2").innerText = "";
+      } else if (!data.location) {
+        document.querySelector("#message_1").innerText = data.message;
+        document.querySelector("#message_2").innerText = "";
       } else {
         document.querySelector("#message_1").innerText = data.location;
         document.querySelector("#message_2").innerText = data.forecast;
