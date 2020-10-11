@@ -12,9 +12,10 @@ const weather_stack = (latitude, longitude, callback) => {
       const curr_temp = data.current.temperature;
       const feels_like = data.current.feelslike;
       const weather_descriptions = data.current.weather_descriptions;
+      const Humidity = data.current.humidity;
       callback(
         undefined,
-        `${weather_descriptions[0]}. It is currently ${curr_temp} out, it feels like ${feels_like} degree out.`
+        `It's ${weather_descriptions[0]} today. It is currently ${curr_temp} out, it feels like ${feels_like} degree out. Humidity:${Humidity}%`
       );
     }
   });
